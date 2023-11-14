@@ -6,12 +6,18 @@
     color: white;
 }
 
+:root{
+    --bg-clr: rgb(211, 189, 161);
+    --card-clr: rgb(192, 171, 144);
+    --inp-clr: rgb(145, 123, 97);
+}
+
 body{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    background-color: pink;
+    background-color: var(--bg-clr);
     height: 100vh;
 }
 
@@ -39,7 +45,7 @@ div{
     min-width: 90%;
     min-height: 90vh;
     padding: 1rem;
-    background-color: rgb(230, 174, 182);
+    background-color: var(--card-clr);
     box-shadow: 0px 0px 10px 5px;
     border-radius: 15px;
 }
@@ -49,7 +55,7 @@ button{
     font-size: 1rem;
     border-radius: 30px;
     background-color: white;
-    color: palevioletred;
+    color: var(--inp-clr);
     font-weight: 800;
     border: 2px solid white;
     width: 80%;
@@ -58,8 +64,9 @@ button{
 
 button:hover{
     border: 2px solid white;
-    background-color:rgb(190, 144, 152);
+    background-color:var(--inp-clr);
     color: white;
+    cursor: pointer;
 }
 
 li{
@@ -71,7 +78,7 @@ li{
     width: 80%;
     text-align: center;
     border: 3px solid white;
-    background-color: rgb(190, 144, 152);
+    background-color: var(--inp-clr);
     color: white;
     height: 2rem;
     border-radius: 10px;
@@ -109,21 +116,13 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     div{
-    display: flex;
-    flex-flow: column wrap;
     gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-    margin: 3rem;
-    border: 3px solid white;
+    margin: 2rem;
     min-width: 40%;
     max-width: 40%;
     min-height: 80%;
     max-height: 80%;
     padding: 1rem;
-    background-color: rgb(230, 174, 182);
-    box-shadow: 0px 0px 10px 5px;
-    border-radius: 15px;
     }
 
     h1{
