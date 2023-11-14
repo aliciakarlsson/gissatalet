@@ -29,8 +29,8 @@ function checkGuesses(){
     //Tar bort ett försök per klick
     attempts--;
 
-    //Kollar om du angett rätt nummer
-    if(guess === randomNumber && guess < 101 && guess > 0){
+    //Kollar om du angett rätt nummer och att det är mellan 0-100
+    if(guess === randomNumber && guess < 101 && guess > -1){
         message.textContent = `Grattis! Du har gissat rätt, talet är ${randomNumber}!`;
         disableInput();
         return;
@@ -41,19 +41,19 @@ function checkGuesses(){
           : `Din sista gissning var ${guess} och för högt, det rätta svaret var ${randomNumber}. Nu har du slut försök.`;
       disableInput();
       return;
-    } else if (guess < randomNumber && guess < 101 && guess > 0) {
+    } else if (guess < randomNumber && guess < 101 && guess > -1) {
       //Säger om du gissat för lågt eller högt.
       const listItem = document.createElement("li");
       listItem.textContent = `Din gissning är: ${guess}, det är för lågt.`;
       list.appendChild(listItem);
-    } else if (guess > randomNumber && guess < 101 && guess > 0) {
+    } else if (guess > randomNumber && guess < 101 && guess > -1) {
       const listItem = document.createElement("li");
       listItem.textContent = `Din gissning är: ${guess}, det är för högt.`;
       list.appendChild(listItem);
     } else {
       alert("Skriv en siffra mellan 0-100");
     }
-
+    //Tömmer input efter varje gissning
     guessInput.value = "";
 };
 //Funktion som avslutar spelet när du gissat rätt eller har slut försök
@@ -61,7 +61,7 @@ function disableInput(){
     guessBtn.removeEventListener("click", checkGuesses);
 }
 
-
+//Funktionen som resettar spelet
 function resetGame(){
     randomNumber = Math.floor(Math.random() * 101);
     attempts = 5;
