@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+}
+
+div{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    border: 3px solid white;
+    width: 30%;
+    padding: 2rem;
+    background-color: rgb(230, 174, 182);
+    box-shadow: 0px 0px 10px 5px;
+}
+
+button{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    background-color: white;
+    color: palevioletred;
+    font-weight: 800;
+    border: 2px solid white;
+}
+
+button:hover{
+    border: 2px solid white;
+    background-color:rgb(190, 144, 152);
+    color: white;
+}
+
+li{
+    font-size: 1.1rem;
+}
+
+#guessnumber{
+    width: 80%;
+    text-align: center;
+    border: 3px solid white;
+    background-color: rgb(190, 144, 152);
+    color: white;
+}
+
+input:focus{
+    outline: none;
+    border: 3px solid white;
+}
+
+input::placeholder{
+    color: white;
+}
